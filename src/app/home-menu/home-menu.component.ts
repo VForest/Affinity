@@ -1,4 +1,6 @@
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home-menu',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeMenuComponent implements OnInit {
 
-  constructor() { }
+  cols = 3;
+  screenSize: Observable<BreakpointState>
+
+  constructor(breakpointOberserver: BreakpointObserver) {
+    this.screenSize = breakpointOberserver.observe(['(max-width: 599.98px)'])
+  }
 
   ngOnInit(): void {
+    this.screenSize.subscribe(result => {
+      result.matches ? this.cols = 1 : this.cols = 2;
+    })
   }
 
 }

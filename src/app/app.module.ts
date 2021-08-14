@@ -9,6 +9,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DiceRollerComponent } from './dice-roller/dice-roller.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [AppComponent, HomeMenuComponent, PageNotFoundComponent, DiceRollerComponent],
@@ -19,8 +20,9 @@ import { DiceRollerComponent } from './dice-roller/dice-roller.component';
     MatGridListModule,
     MatButtonModule,
     BrowserAnimationsModule,
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

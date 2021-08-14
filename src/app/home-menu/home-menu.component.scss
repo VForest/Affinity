@@ -7,4 +7,5 @@ mat-grid-tile {
     color: map-get($my-theme, "primary", "contrast", 700);
     width: 100px;
     border: 3px solid map-get($my-theme, "primary", "default");
+    font-size: 30px;
   }
