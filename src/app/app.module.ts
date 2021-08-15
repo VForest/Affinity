@@ -22,6 +22,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { LifeCounterTileComponent } from './life-counter/life-counter-tile/life-counter-tile.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { DiceRollerTileComponent } from './dice-roller/dice-roller-tile/dice-roller-tile.component';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatInputModule,
     MatFormFieldModule,
     MatSidenavModule,
+    MatDividerModule,
     MatDialogModule,
     MatSelectModule,
     MatCheckboxModule,

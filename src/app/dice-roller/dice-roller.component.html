@@ -1,1 +1,35 @@
-<p>dice-roller works!</p>
+<mat-grid-list cols="{{ cols }}" rowHeight="2:1" gutterSize="20px">
+  <mat-grid-tile
+    ><app-dice-roller-tile
+      title="Flip a coin"
+      [faces]="2"
+    ></app-dice-roller-tile
+  ></mat-grid-tile>
+  <mat-grid-tile
+    ><app-dice-roller-tile title="Roll a d4" [faces]="4"></app-dice-roller-tile
+  ></mat-grid-tile>
+  <mat-grid-tile
+    ><app-dice-roller-tile title="Roll a d6" [faces]="6"></app-dice-roller-tile
+  ></mat-grid-tile>
+  <mat-grid-tile
+    ><app-dice-roller-tile title="Roll a d8" [faces]="8"></app-dice-roller-tile
+  ></mat-grid-tile>
+  <mat-grid-tile
+    ><app-dice-roller-tile
+      title="Roll a d10"
+      [faces]="10"
+    ></app-dice-roller-tile
+  ></mat-grid-tile>
+  <mat-grid-tile
+    ><app-dice-roller-tile
+      title="Roll a d12"
+      [faces]="12"
+    ></app-dice-roller-tile
+  ></mat-grid-tile>
+  <mat-grid-tile
+    ><app-dice-roller-tile
+      title="Roll a d20"
+      [faces]="20"
+    ></app-dice-roller-tile
+  ></mat-grid-tile>
+</mat-grid-list>

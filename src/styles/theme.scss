@@ -86,3 +86,12 @@ body {
 .menu-button-label{
   margin-left: 5px;
 }
+
+mat-grid-list {
+  margin: 30px;
+}
+mat-grid-tile {
+    color: map-get($my-theme, "primary", "contrast", 700);
+    border: 3px solid map-get($my-theme, "primary", "default");
+    font-size: 20px;
+  }
