@@ -14,9 +14,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { LifeCounterComponent } from './life-counter/life-counter.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeMenuComponent, PageNotFoundComponent, DiceRollerComponent],
+  declarations: [AppComponent, HomeMenuComponent, PageNotFoundComponent, DiceRollerComponent, DiceRollerTileComponent, LifeCounterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
