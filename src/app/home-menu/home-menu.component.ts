@@ -10,14 +10,11 @@ import { Observable } from 'rxjs';
 export class HomeMenuComponent implements OnInit {
 
   cols = 3;
-  screenSize: Observable<BreakpointState>
 
-  constructor(breakpointOberserver: BreakpointObserver) {
-    this.screenSize = breakpointOberserver.observe(['(max-width: 599.98px)'])
-  }
+  constructor(private breakpointOberserver: BreakpointObserver) { }
 
   ngOnInit(): void {
-    this.screenSize.subscribe(result => {
+    this.breakpointOberserver.observe(['(max-width: 599.98px)']).subscribe(result => {
       result.matches ? this.cols = 1 : this.cols = 2;
     })
   }

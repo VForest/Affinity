@@ -10,6 +10,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DiceRollerComponent } from './dice-roller/dice-roller.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [AppComponent, HomeMenuComponent, PageNotFoundComponent, DiceRollerComponent],
@@ -21,6 +25,10 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatButtonModule,
     BrowserAnimationsModule,
     LayoutModule,
+    MatIconModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSidenavModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

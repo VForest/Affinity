@@ -1,4 +1,41 @@
-<mat-toolbar color="primary">
-  <span class="title"><a href="../">Affinity</a></span>
+<mat-toolbar color="primary" class="mat-elevation-z8">
+  <button
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    class="icon"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+    <mat-icon *ngIf="sidenav.opened">close</mat-icon>
+  </button>
+  <span>Affinity</span>
+  <span class="spacer"></span>
+  <!--<form>
+    <mat-form-field>
+      <input matInput type="search" placeholder="Search for any MTG card" appearance="fill">
+    </mat-form-field>
+  </form>-->
 </mat-toolbar>
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <a href="../">
+      <button mat-button class="menu-button">
+        <mat-icon>home</mat-icon>
+        <span class="menu-button-label">Home</span>
+      </button>
+    </a>
+    <a href="../dice">
+      <button mat-button class="menu-button">
+        <mat-icon>casino</mat-icon>
+        <span class="menu-button-label">Dice Roller</span>
+      </button>
+    </a>
+    <button mat-button class="menu-button">
+      <mat-icon>monitor_heart</mat-icon>
+      <span class="menu-button-label">Life Counter</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

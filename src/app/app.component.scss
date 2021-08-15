@@ -1,8 +1,18 @@
-.title{
-    margin-left: 20px;
-}
-
 a{
     color: white;
     text-decoration: none;
+}
+
+mat-sidenav-container{
+    height: calc(100% - 64px);
+    background-color: initial;
+
+    mat-sidenav{
+        width: 150px;
+    }
+}
+
+
+.spacer{
+    flex: 1 1 auto;
 }
