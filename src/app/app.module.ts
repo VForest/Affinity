@@ -20,6 +20,7 @@ import { LifeCounterDialogComponent } from './life-counter/life-counter-dialog/l
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { LifeCounterTileComponent } from './life-counter/life-counter-tile/life-counter-tile.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { LifeCounterTileComponent } from './life-counter/life-counter-tile/life-
     MatDialogModule,
     MatSelectModule,
     MatCheckboxModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

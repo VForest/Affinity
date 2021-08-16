@@ -8,6 +8,10 @@
   mat-dialog-actions {
     justify-content: space-between;
   }
+
+  mat-checkbox:first-of-type{
+      margin-top: 10px;
+  }
 }
 
 .life-counter-configuration {
