@@ -1,1 +1,46 @@
-<p>life-counter-tile works!</p>
+  <mat-form-field>
+    <h1>
+      <input
+        matInput
+        [disabled]="nameDisabled"
+        type="text"
+        value="Player {{ playerNumber }}"
+      />
+    </h1>
+    <mat-icon *ngIf="nameDisabled" matSuffix (click)="editName()"
+      >edit</mat-icon
+    >
+    <mat-icon *ngIf="!nameDisabled" matSuffix (click)="editName()"
+      >check</mat-icon
+    >
+  </mat-form-field>
+  <div class="life">
+    <span class="counter">{{ life }}</span>
+    <mat-icon matTooltip="Life points">favorite</mat-icon>
+    <div class="lifeActions">
+      <mat-icon (click)="addLife()">add</mat-icon>
+      <mat-icon (click)="removeLife()">remove</mat-icon>
+    </div>
+  </div>
+  <div *ngIf="poison === 'true'" class="life">
+    <span class="counter">{{ poisonCounter }}</span>
+    <mat-icon matTooltip="Poison counters">sanitizer</mat-icon>
+    <div class="lifeActions">
+      <mat-icon (click)="addPoison()">add</mat-icon>
+      <mat-icon (click)="removePoison()">remove</mat-icon>
+    </div>
+  </div>
+  <div *ngIf="commander === 'true'" class="life">
+    <span class="counter">{{ commanderDamage }}</span>
+    <mat-icon matTooltip="Commander Damage">pets</mat-icon>
+    <div class="lifeActions">
+      <mat-icon (click)="addCommanderDamage()">add</mat-icon>
+      <mat-icon (click)="removeCommanderDamage()">remove</mat-icon>
+    </div>
+  </div>
+  <div class="reset">
+      <button mat-raised-button (click)="reset()">
+          <span>Reset</span>
+          <mat-icon>replay</mat-icon>
+      </button>
+  </div>

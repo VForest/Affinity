@@ -1,1 +1,191 @@
-<p>life-counter works!</p>
+<ng-container *ngIf="playerNumber == 2">
+  <mat-grid-list cols="2" rowHeight="350px" gutterSize="5px">
+    <mat-grid-tile class="player1"
+      ><app-life-counter-tile
+        startingLifeTotal="{{ startingLifeTotal }}"
+        commander="{{ commander }}"
+        poison="{{ poison }}"
+        playerNumber="1"
+      ></app-life-counter-tile
+    ></mat-grid-tile>
+    <mat-grid-tile class="player2"
+      ><app-life-counter-tile
+        startingLifeTotal="{{ startingLifeTotal }}"
+        commander="{{ commander }}"
+        poison="{{ poison }}"
+        playerNumber="2"
+      ></app-life-counter-tile
+    ></mat-grid-tile>
+  </mat-grid-list>
+</ng-container>
+
+<ng-container *ngIf="playerNumber == 3">
+  <mat-grid-list cols="2" rowHeight="350px" gutterSize="5px">
+    <mat-grid-tile class="player1"
+      ><app-life-counter-tile
+        startingLifeTotal="{{ startingLifeTotal }}"
+        commander="{{ commander }}"
+        poison="{{ poison }}"
+        playerNumber="1"
+      ></app-life-counter-tile
+    ></mat-grid-tile>
+    <mat-grid-tile class="player2"
+      ><app-life-counter-tile
+        startingLifeTotal="{{ startingLifeTotal }}"
+        commander="{{ commander }}"
+        poison="{{ poison }}"
+        playerNumber="2"
+      ></app-life-counter-tile
+    ></mat-grid-tile>
+    <mat-grid-tile class="player3"
+      ><app-life-counter-tile
+        startingLifeTotal="{{ startingLifeTotal }}"
+        commander="{{ commander }}"
+        poison="{{ poison }}"
+        playerNumber="3"
+      ></app-life-counter-tile
+    ></mat-grid-tile>
+  </mat-grid-list>
+</ng-container>
+
+<ng-container *ngIf="playerNumber == 4">
+  <mat-grid-list cols="2" rowHeight="350px" gutterSize="5px">
+    <mat-grid-tile class="player1"
+      ><app-life-counter-tile
+        startingLifeTotal="{{ startingLifeTotal }}"
+        commander="{{ commander }}"
+        poison="{{ poison }}"
+        playerNumber="1"
+      ></app-life-counter-tile
+    ></mat-grid-tile>
+    <mat-grid-tile class="player2"
+      ><app-life-counter-tile
+        startingLifeTotal="{{ startingLifeTotal }}"
+        commander="{{ commander }}"
+        poison="{{ poison }}"
+        playerNumber="2"
+      ></app-life-counter-tile
+    ></mat-grid-tile>
+    <mat-grid-tile class="player3"
+      ><app-life-counter-tile
+        startingLifeTotal="{{ startingLifeTotal }}"
+        commander="{{ commander }}"
+        poison="{{ poison }}"
+        playerNumber="3"
+      ></app-life-counter-tile
+    ></mat-grid-tile>
+    <mat-grid-tile class="player4"
+      ><app-life-counter-tile
+        startingLifeTotal="{{ startingLifeTotal }}"
+        commander="{{ commander }}"
+        poison="{{ poison }}"
+        playerNumber="4"
+      ></app-life-counter-tile
+    ></mat-grid-tile>
+  </mat-grid-list>
+</ng-container>
+
+<ng-container *ngIf="playerNumber == 5">
+  <mat-grid-list cols="3">
+    <mat-grid-tile class="player1"
+      ><app-life-counter-tile
+        startingLifeTotal="{{ startingLifeTotal }}"
+        commander="{{ commander }}"
+        poison="{{ poison }}"
+        playerNumber="1"
+      ></app-life-counter-tile
+    ></mat-grid-tile>
+    <mat-grid-tile class="player2"
+      ><app-life-counter-tile
+        startingLifeTotal="{{ startingLifeTotal }}"
+        commander="{{ commander }}"
+        poison="{{ poison }}"
+        playerNumber="2"
+      ></app-life-counter-tile
+    ></mat-grid-tile>
+    <mat-grid-tile class="player3"
+      ><app-life-counter-tile
+        startingLifeTotal="{{ startingLifeTotal }}"
+        commander="{{ commander }}"
+        poison="{{ poison }}"
+        playerNumber="3"
+      ></app-life-counter-tile
+    ></mat-grid-tile>
+    <mat-grid-tile class="player4"
+      ><app-life-counter-tile
+        startingLifeTotal="{{ startingLifeTotal }}"
+        commander="{{ commander }}"
+        poison="{{ poison }}"
+        playerNumber="4"
+      ></app-life-counter-tile
+    ></mat-grid-tile>
+    <mat-grid-tile class="player5"
+      ><app-life-counter-tile
+        startingLifeTotal="{{ startingLifeTotal }}"
+        commander="{{ commander }}"
+        poison="{{ poison }}"
+        playerNumber="5"
+      ></app-life-counter-tile
+    ></mat-grid-tile>
+  </mat-grid-list>
+</ng-container>
+
+<ng-container *ngIf="playerNumber == 6">
+  <mat-grid-list cols="3">
+    <mat-grid-tile class="player1"
+      ><app-life-counter-tile
+        startingLifeTotal="{{ startingLifeTotal }}"
+        commander="{{ commander }}"
+        poison="{{ poison }}"
+        playerNumber="1"
+      ></app-life-counter-tile
+    ></mat-grid-tile>
+    <mat-grid-tile class="player2"
+      ><app-life-counter-tile
+        startingLifeTotal="{{ startingLifeTotal }}"
+        commander="{{ commander }}"
+        poison="{{ poison }}"
+        playerNumber="2"
+      ></app-life-counter-tile
+    ></mat-grid-tile>
+    <mat-grid-tile class="player3"
+      ><app-life-counter-tile
+        startingLifeTotal="{{ startingLifeTotal }}"
+        commander="{{ commander }}"
+        poison="{{ poison }}"
+        playerNumber="3"
+      ></app-life-counter-tile
+    ></mat-grid-tile>
+    <mat-grid-tile class="player4"
+      ><app-life-counter-tile
+        startingLifeTotal="{{ startingLifeTotal }}"
+        commander="{{ commander }}"
+        poison="{{ poison }}"
+        playerNumber="4"
+      ></app-life-counter-tile
+    ></mat-grid-tile>
+    <mat-grid-tile class="player5"
+      ><app-life-counter-tile
+        startingLifeTotal="{{ startingLifeTotal }}"
+        commander="{{ commander }}"
+        poison="{{ poison }}"
+        playerNumber="5"
+      ></app-life-counter-tile
+    ></mat-grid-tile>
+    <mat-grid-tile class="player6"
+      ><app-life-counter-tile
+        startingLifeTotal="{{ startingLifeTotal }}"
+        commander="{{ commander }}"
+        poison="{{ poison }}"
+        playerNumber="6"
+      ></app-life-counter-tile
+    ></mat-grid-tile>
+  </mat-grid-list>
+</ng-container>
+<ng-container *ngIf="playerNumber !== 0 && !dialogOpened">
+  <div class="config-button">
+    <button mat-raised-button (click)="openSettings()">
+      <span>Change configuration</span><mat-icon>settings</mat-icon>
+    </button>
+  </div></ng-container
+>
