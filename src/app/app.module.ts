@@ -23,7 +23,7 @@ import { LifeCounterTileComponent } from './life-counter/life-counter-tile/life-
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { DiceRollerTileComponent } from './dice-roller/dice-roller-tile/dice-roller-tile.component';
-import {MatDividerModule} from '@angular/material/divider';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -34,6 +34,7 @@ import {MatDividerModule} from '@angular/material/divider';
     LifeCounterComponent,
     LifeCounterDialogComponent,
     LifeCounterTileComponent,
+    DiceRollerTileComponent,
   ],
   imports: [
     BrowserModule,
