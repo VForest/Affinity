@@ -19,6 +19,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { LifeCounterDialogComponent } from './life-counter/life-counter-dialog/life-counter-dialog.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { LifeCounterTileComponent } from './life-counter/life-counter-tile/life-counter-tile.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     DiceRollerComponent,
     LifeCounterComponent,
     LifeCounterDialogComponent,
+    LifeCounterTileComponent,
   ],
   imports: [
     BrowserModule,
