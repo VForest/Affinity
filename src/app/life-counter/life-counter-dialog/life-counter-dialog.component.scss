@@ -1,0 +1,16 @@
+.dialog {
+  display: flex;
+  flex-direction: column;
+
+  mat-dialog-content {
+    overflow: unset;
+  }
+  mat-dialog-actions {
+    justify-content: space-between;
+  }
+}
+
+.life-counter-configuration {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,29 @@
+<div class="dialog">
+  <h1 mat-dialog-title>Life Counter Configuration</h1>
+  <mat-dialog-content class="life-counter-configuration">
+    <mat-form-field>
+      <mat-label>Number of Players</mat-label>
+      <mat-select value="2">
+        <mat-option value="2">2</mat-option>
+        <mat-option value="3">3</mat-option>
+        <mat-option value="4">4</mat-option>
+        <mat-option value="5">5</mat-option>
+        <mat-option value="6">6</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Starting Life Total</mat-label>
+      <input matInput type="number" placeholder="Ex. 40" min="0" value="20" />
+    </mat-form-field>
+    <mat-checkbox>Keep Track of Commander Damage</mat-checkbox>
+    <mat-checkbox>Keep Track of Poison Counters</mat-checkbox>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button mat-dialog-close>
+      <mat-icon>close</mat-icon><span>Cancel</span>
+    </button>
+    <button mat-button mat-dialog-close>
+      <mat-icon>check</mat-icon><span>Confirm</span>
+    </button>
+  </mat-dialog-actions>
+</div>
