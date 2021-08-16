@@ -1,0 +1,29 @@
+mat-icon:hover {
+  cursor: pointer;
+}
+.life {
+  display: flex;
+  font-size: 48px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+
+  mat-icon:first-of-type {
+    cursor: default;
+  }
+  .lifeActions {
+    display: flex;
+    flex-direction: column;
+    mat-icon:hover {
+        cursor: pointer;
+      }
+  }
+  .counter {
+    min-width: 90px;
+  }
+}
+
+.reset {
+  text-align: center;
+  margin-top: 10px;
+}
