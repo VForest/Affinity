@@ -15,9 +15,20 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { LifeCounterComponent } from './life-counter/life-counter.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { LifeCounterDialogComponent } from './life-counter/life-counter-dialog/life-counter-dialog.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
-  declarations: [AppComponent, HomeMenuComponent, PageNotFoundComponent, DiceRollerComponent, DiceRollerTileComponent, LifeCounterComponent],
+  declarations: [
+    AppComponent,
+    HomeMenuComponent,
+    PageNotFoundComponent,
+    DiceRollerComponent,
+    LifeCounterComponent,
+    LifeCounterDialogComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -30,8 +41,11 @@ import { LifeCounterComponent } from './life-counter/life-counter.component';
     MatInputModule,
     MatFormFieldModule,
     MatSidenavModule,
+    MatDialogModule,
+    MatSelectModule,
+    MatCheckboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
