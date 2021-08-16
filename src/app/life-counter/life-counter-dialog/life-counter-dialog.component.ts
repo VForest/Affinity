@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-life-counter-dialog',
@@ -23,9 +23,47 @@ export class LifeCounterDialogComponent implements OnInit {
     commander: new FormControl(false),
   });
 
-  constructor(private dialogRef: MatDialogRef<LifeCounterDialogComponent>) {}
+  initialPlayerNumber = 0;
+  initialStartingLifeTotal = 0;
+  initialCommander = false;
+  initialPoison = false;
 
-  ngOnInit(): void {}
+  constructor(
+    @Inject(MAT_DIALOG_DATA)
+    private data: {
+      playerNumber: number;
+      startingLifeTotal: number;
+      poison: boolean;
+      commander: boolean;
+    },
+    private dialogRef: MatDialogRef<LifeCounterDialogComponent>
+  ) {}
+
+  ngOnInit(): void {
+    if (this.data.playerNumber) {
+      this.initialPlayerNumber = this.data.playerNumber;
+      this.lifeCounterConfiguration
+        .get('playerNumber')
+        ?.setValue(this.initialPlayerNumber);
+    }
+    if (this.data.startingLifeTotal) {
+      this.initialStartingLifeTotal = this.data.startingLifeTotal;
+      this.lifeCounterConfiguration
+        .get('startingLifeTotal')
+        ?.setValue(this.initialStartingLifeTotal);
+    }
+    if (this.data.poison) {
+      this.initialPoison = this.data.poison;
+      this.lifeCounterConfiguration.get('poison')?.setValue(this.initialPoison);
+    }
+
+    if (this.data.commander) {
+      this.initialCommander = this.data.commander;
+      this.lifeCounterConfiguration
+        .get('commander')
+        ?.setValue(this.initialCommander);
+    }
+  }
 
   getErrorMessage() {
     if (
@@ -46,6 +84,19 @@ export class LifeCounterDialogComponent implements OnInit {
   }
 
   onSubmit() {
-    this.dialogRef.close(this.lifeCounterConfiguration.value)
+    this.dialogRef.close(this.lifeCounterConfiguration.value);
+  }
+
+  cancel() {
+    this.lifeCounterConfiguration
+      .get('playerNumber')
+      ?.setValue(this.initialPlayerNumber);
+    this.lifeCounterConfiguration
+      .get('startingLifeTotal')
+      ?.setValue(this.initialStartingLifeTotal);
+    this.lifeCounterConfiguration.get('poison')?.setValue(this.initialPoison);
+    this.lifeCounterConfiguration
+      .get('commander')
+      ?.setValue(this.initialCommander);
   }
 }

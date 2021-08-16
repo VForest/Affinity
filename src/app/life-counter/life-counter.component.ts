@@ -23,7 +23,17 @@ export class LifeCounterComponent implements OnInit {
   openSettings() {
     this.dialogOpened = true;
     this.matDialog
-      .open(LifeCounterDialogComponent, { hasBackdrop: false })
+      .open(LifeCounterDialogComponent, {
+        hasBackdrop: false,
+        data: {
+          playerNumber: this.playerNumber ? this.playerNumber : 0,
+          startingLifeTotal: this.startingLifeTotal
+            ? this.startingLifeTotal
+            : 0,
+          poison: this.poison ? this.poison : false,
+          commander: this.commander ? this.commander : false,
+        },
+      })
       .afterClosed()
       .subscribe((result) => {
         this.playerNumber = result.playerNumber;
