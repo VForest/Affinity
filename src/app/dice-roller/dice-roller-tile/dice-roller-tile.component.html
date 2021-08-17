@@ -1,16 +1,15 @@
 <div class="title">
-  {{ title }}
+  <h1>{{ title }}</h1>
 </div>
 <div class="result" *ngIf="result">
-    <span *ngIf="title==='Flip a coin'&&result===1">Result is : Head</span>
-    <span *ngIf="title==='Flip a coin'&&result===2">Result is : Tails</span>
-    <span *ngIf="title!=='Flip a coin'">Result is : {{result}}</span>
-    
+  <span [class.again]="sameResult" *ngIf="title === 'Flip a coin' && result === 1">Result is : Head</span>
+  <span [class.again]="sameResult" *ngIf="title === 'Flip a coin' && result === 2">Result is : Tails</span>
+  <span [class.again]="sameResult" *ngIf="title !== 'Flip a coin'">Result is : {{ result }}</span>
 </div>
 <div class="buttons">
-    <button mat-stroked-button (click)="roll(faces)">
-        <mat-icon>refresh</mat-icon>
-        <span *ngIf="title==='Flip a coin'">Flip the coin</span>
-        <span *ngIf="title!=='Flip a coin'">Roll the dice</span>
-    </button>
+  <button mat-raised-button (click)="roll(faces)">
+    <mat-icon>refresh</mat-icon>
+    <span *ngIf="title === 'Flip a coin'">Flip the coin</span>
+    <span *ngIf="title !== 'Flip a coin'">Roll the dice</span>
+  </button>
 </div>
