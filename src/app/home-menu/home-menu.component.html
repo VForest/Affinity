@@ -1,7 +1,12 @@
-<mat-grid-list cols={{cols}} rowHeight="2.5:1" gutterSize="20px">
-  <a href="../dice">
-    <mat-grid-tile>Dice roller</mat-grid-tile>
-  </a>
+<h1 class="community-content">Recent Community Content</h1>
+<mat-grid-list cols="{{ cols }}" rowHeight="2.5:1" gutterSize="20px">
+  <mat-grid-tile>
+    <youtube-player
+      videoId="Y0N8RcsFADo"
+      [height]="250"
+      [width]="500"
+    ></youtube-player>
+  </mat-grid-tile>
   <mat-grid-tile>Life counter</mat-grid-tile>
   <mat-grid-tile>3</mat-grid-tile>
   <mat-grid-tile>4</mat-grid-tile>

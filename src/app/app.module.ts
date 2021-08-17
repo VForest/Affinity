@@ -24,6 +24,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { DiceRollerTileComponent } from './dice-roller/dice-roller-tile/dice-roller-tile.component';
 import { MatDividerModule } from '@angular/material/divider';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatCheckboxModule,
     ReactiveFormsModule,
     MatTooltipModule,
+    YouTubePlayerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
